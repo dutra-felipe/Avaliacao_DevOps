@@ -53,7 +53,8 @@ pipeline {
                 script {
                     sh 'docker-compose --version'
                     
-                    dir('Avaliacao_DevOps/parte2-maria_php') {
+                    dir('./parte2-maria_php') {
+                        sh 'docker-compose down'
                         sh 'docker-compose up -d'
                     }
                 }
@@ -64,8 +65,8 @@ pipeline {
     post {
         always {
             script {
-                dir('Avaliacao_DevOps/parte2-maria_php') {
-                    sh 'docker-compose down'
+                dir('./parte2-maria_php') {
+                    //sh 'docker-compose down'
                 }
             }
         }

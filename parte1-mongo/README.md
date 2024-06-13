@@ -50,7 +50,8 @@ pipeline {
                 script {
                     sh 'docker-compose --version'
                     
-                    dir('Avaliacao_DevOps/parte1-mongo') {
+                    dir('./parte1-mongo') {
+                        sh 'docker-compose down'
                         sh 'docker-compose up -d'
                     }
                 }
@@ -61,8 +62,8 @@ pipeline {
     post {
         always {
             script {
-                dir('Avaliacao_DevOps/parte1-mongo') {
-                    sh 'docker-compose down'
+                dir('./parte1-mongo') {
+                    //sh 'docker-compose down'
                 }
             }
         }
