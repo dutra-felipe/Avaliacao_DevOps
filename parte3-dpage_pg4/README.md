@@ -1,4 +1,4 @@
-# Exercício 1: mongo:4.2 e mongo-express
+# Exercício 3: postgres e dpage/pgadmin4
 
 # Parâmetro de execução de container (docker run)
 ```bash
