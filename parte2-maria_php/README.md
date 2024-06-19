@@ -1,4 +1,4 @@
-# Exercício 1: mongo:4.2 e mongo-express
+# Exercício 2: mariadb e phpmyadmin
 
 # Parâmetro de execução de container (docker run)
 ```bash
